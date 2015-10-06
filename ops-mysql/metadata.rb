@@ -1,4 +1,4 @@
-name 'blag-mysql'
+name 'ops-mysql'
 maintainer 'Matt Kleinsasser'
 maintainer_email 'mxkx@hotmail.com'
 license ''

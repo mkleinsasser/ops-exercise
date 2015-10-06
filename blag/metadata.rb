@@ -6,5 +6,5 @@ description 'Installs/Configures blag'
 long_description 'Installs/Configures blag'
 version '0.1.0'
 
-depends 'blag-mysql'
+depends 'ops-mysql'
 depends 'ops-nginx'

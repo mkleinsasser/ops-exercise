@@ -4,6 +4,6 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-include_recipe 'blag-mysql'
+include_recipe 'ops-mysql'
 
 include_recipe 'blag::nginx'

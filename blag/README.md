@@ -7,7 +7,7 @@ Requirements
 ### Cookbooks
 The following cookbooks are direct dependencies.
 
-blag-mysql
+ops-mysql
 ops-nginx
 
 Attributes

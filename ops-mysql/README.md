@@ -1,4 +1,4 @@
-blag-mysql Cookbook
+ops-mysql Cookbook
 ==================
 Installs mysql with policy customizations for blag.  See the mysql cookbook for general mysql requirements.
 
@@ -15,13 +15,13 @@ none
 
 Usage
 -----
-#### blag-mysql::default
+#### ops-mysql::default
 Include the recipe either in the node's run_list, or in the recipe of an application that requires it.
 
 blag/recipes/default.rb:
 ```
 # uses mysql
-include_recipe "blag-mysql"
+include_recipe "ops-mysql"
 ```
 
 -or-
@@ -31,7 +31,7 @@ node run_list:
 {
   "name":"my_node",
   "run_list": [
-    "recipe[blag-mysql]"
+    "recipe[ops-mysql]"
   ]
 }
 ```

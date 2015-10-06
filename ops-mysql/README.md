@@ -1,6 +1,6 @@
 ops-mysql Cookbook
 ==================
-Installs mysql with policy customizations for blag.  See the mysql cookbook for general mysql requirements.
+Installs mysql with policy customizations for ops.  See the mysql cookbook for general mysql requirements.
 
 Requirements
 ------------

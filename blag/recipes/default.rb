@@ -7,3 +7,4 @@
 include_recipe 'blag-mysql'
 
 include_recipe 'blag::nginx'
+include_recipe 'blag::hhvm'

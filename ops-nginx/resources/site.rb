@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: blag-nginx
+# Cookbook Name:: ops-nginx
 # Resource:: site
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.

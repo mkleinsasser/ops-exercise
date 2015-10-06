@@ -1,4 +1,4 @@
-# blag-nginx
+# ops-nginx
 
 TODO: Enter the cookbook description here.
 

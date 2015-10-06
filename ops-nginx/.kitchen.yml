@@ -12,5 +12,5 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[blag-nginx::default]
+      - recipe[ops-nginx::default]
     attributes:

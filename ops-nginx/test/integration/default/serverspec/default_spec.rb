@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'blag-nginx::default' do
+describe 'ops-nginx::default' do
   # Serverspec examples can be found at
   # http://serverspec.org/resource_types.html
   it 'does something' do

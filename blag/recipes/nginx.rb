@@ -4,9 +4,9 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-include_recipe 'blag-nginx'
+include_recipe 'ops-nginx'
 
-blag_nginx_site "blag" do
+ops_nginx_site "blag" do
   port 80
   root "/var/www"
 end

@@ -8,8 +8,7 @@ Requirements
 The following cookbooks are direct dependencies.
 
 blag-mysql
-blag-nginx
-blag-hhvm
+ops-nginx
 
 Attributes
 ----------

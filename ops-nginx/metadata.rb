@@ -1,4 +1,4 @@
-name 'blag-nginx'
+name 'ops-nginx'
 maintainer 'Matt Kleinsasser'
 maintainer_email 'mxkx@hotmail.com'
 license ''

@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: blag-nginx
+# Cookbook Name:: ops-nginx
 # Provider:: site
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
@@ -8,7 +8,7 @@
 action :create do
 
   template "#{node.nginx.dir}/conf.d/#{new_resource.name}.conf" do
-    cookbook "blag-nginx"
+    cookbook "ops-nginx"
     source "site.conf.erb"
     owner  "root"
     group  "root"

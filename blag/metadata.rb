@@ -8,5 +8,3 @@ version '0.1.0'
 
 depends 'blag-mysql'
 depends 'blag-nginx'
-depends 'hhvm', '~> 0.6.0'
-

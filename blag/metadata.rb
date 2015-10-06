@@ -9,4 +9,4 @@ version '0.1.0'
 depends 'mysql', '~> 6.1.2'
 depends 'nginx', '~> 2.7.6'
 depends 'hhvm', '~> 0.6.0'
-
+depends 'wordpress', '~> 3.0.0'

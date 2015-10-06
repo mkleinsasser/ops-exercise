@@ -1,3 +1,4 @@
 source 'https://supermarket.chef.io'
 
+cookbook 'blag-mysql', path: '../blag-mysql'
 metadata

@@ -7,6 +7,6 @@ long_description 'Installs/Configures blag'
 version '0.1.0'
 
 depends 'blag-mysql'
-depends 'nginx', '~> 2.7.6'
+depends 'blag-nginx'
 depends 'hhvm', '~> 0.6.0'
 

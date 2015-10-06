@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: blag
-# Recipe:: default
+# Recipe:: hhvm
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 

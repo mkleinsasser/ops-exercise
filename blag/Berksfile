@@ -1,3 +1,6 @@
 source 'https://supermarket.chef.io'
 
+cookbook 'ops-mysql', path: '../ops-mysql'
+cookbook 'ops-nginx', path: '../ops-nginx'
+
 metadata

@@ -12,7 +12,7 @@ default['port'] = 80
 
 # mysql
 default['mysql_instance'] = 'blag'
-default['mysql_version'] = '5.6'
+default['mysql_version'] = '5.5'
 default['mysql_port'] = 3306
 default['mysql_root_pass'] = 'never2BeWerkin!'
 

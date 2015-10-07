@@ -5,5 +5,7 @@
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 
-## The default wordpress recipe installs apache. Don't use it!
+## wordpress::default installs Apache, which we don't want
 include_recipe 'wordpress::app'
+
+

@@ -1,7 +1,7 @@
 source 'https://supermarket.chef.io'
 
-cookbook 'ops-linux', path: '../ops-linux'
-cookbook 'ops-mysql', path: '../ops-mysql'
-cookbook 'ops-nginx', path: '../ops-nginx'
+cookbook 'ops-linux', '~> 1.0.0', path: '../ops-linux'
+cookbook 'ops-mysql', '~> 1.0.0', path: '../ops-mysql'
+cookbook 'ops-nginx', '~> 1.0.0', path: '../ops-nginx'
 
 metadata

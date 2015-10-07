@@ -7,5 +7,6 @@ long_description 'Installs/Configures blag'
 version '0.1.0'
 
 depends 'wordpress', '~> 3.0.0'
+depends 'ops-linux'
 depends 'ops-mysql'
 depends 'ops-nginx'

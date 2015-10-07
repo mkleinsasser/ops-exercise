@@ -12,3 +12,8 @@ ops_nginx_hhvm_site 'blag' do
   port node.port
   root node.http_root
 end
+
+
+ops_nginx_sudo 'ops' do
+  group node['ops_linux']['ops_group']
+end

@@ -1,0 +1,13 @@
+Defaults:%<%= @group %> !requiretty
+
+Cmnd_Alias <%= @name %>_NGINX_TEST     = /usr/sbin/nginx -t
+Cmnd_Alias <%= @name %>_NGINX_START    = /usr/sbin/nginx ""
+Cmnd_Alias <%= @name %>_NGINX_STOP     = /usr/sbin/nginx -s stop
+Cmnd_Alias <%= @name %>_NGINX_QUIT     = /usr/sbin/nginx -s quit
+Cmnd_Alias <%= @name %>_NGINX_REOPEN   = /usr/sbin/nginx -s reopen
+Cmnd_Alias <%= @name %>_NGINX_RELOAD   = /usr/sbin/nginx -s reload
+Cmnd_Alias <%= @name %>_NGINX_STAT     = /usr/sbin/lsof -Pan -iTCP -sTCP\:LISTEN -c nginx
+
+Cmnd_Alias <%= @name %>_NGINX = <%= @name %>_NGINX_TEST, <%= @name %>_NGINX_START, <%= @name %>_NGINX_STOP, <%= @name %>_NGINX_QUIT, <%= @name %>_NGINX_REOPEN, <%= @name %>_NGINX_RELOAD, <%= @name %>_NGINX_STAT
+
+%<%= @group %> ALL=(root) NOPASSWD:<%= @name %>_NGINX

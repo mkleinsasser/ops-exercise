@@ -1,0 +1,15 @@
+{
+  "id": "mysql",
+  "root": {
+    "encrypted_data": "KN2gfVZussNO9j1jbvvhdAgWY/66icnjikkL4QSWixcTR9ukoV4JfWX9yOM5\nXb0k\n",
+    "iv": "GsyDF4ZYTRXCXAvJs2NtmQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "wordpress": {
+    "encrypted_data": "Aoz1op0CgfFU0q5SMGco9Xl6KoyweFT1E0Lu7SPEHihmyMhurPwB0822ym99\nTgFk\n",
+    "iv": "BN0GEtlSRuNZbanmNbB94g==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

@@ -14,7 +14,6 @@ default['port'] = 80
 default['mysql_instance'] = 'blag'
 default['mysql_version'] = '5.5'
 default['mysql_port'] = 3306
-default['mysql_root_pass'] = 'never2BeWerkin!'
 
 
 # wordpress
@@ -25,4 +24,3 @@ set['wordpress']['db']['host'] = 'localhost'
 set['wordpress']['db']['port'] = node['mysql_port']
 set['wordpress']['db']['mysql_version'] = node['mysql_version']
 set['wordpress']['db']['instance_name'] = node['mysql_instance']
-set['wordpress']['db']['root_password'] = node['mysql_root_pass']

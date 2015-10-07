@@ -17,10 +17,10 @@ Vagrant.configure(2) do |config|
   config.omnibus.chef_version = :latest
   config.berkshelf.enabled = true
 
-  config.vm.provision "chef_solo" do |chef|
-    chef.run_list = [
-      "recipe[blag::default]"
-    ]
+  config.vm.provision "chef_zero" do |chef|
+    chef.cookbooks_path = 'cookbooks'
+    chef.data_bags_path = 'data_bags'
+    chef.add_recipe 'blag'
   end
 
 end

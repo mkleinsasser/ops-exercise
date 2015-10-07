@@ -1,0 +1,7 @@
+name 'ops-linux'
+maintainer 'Matt Kleinsasser'
+maintainer_email 'mxkx@hotmail.com'
+license ''
+description 'Wrapper cookbook for policy scripts'
+long_description 'Wrapper cookbook for policy scripts'
+version '0.1.0'

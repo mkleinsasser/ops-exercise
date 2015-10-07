@@ -32,6 +32,7 @@ Vagrant.configure(2) do |config|
     chef.encrypted_data_bag_secret_key_path = './cookbooks/blag/test/integration/default/encrypted_data_bag_secret'
     #chef.encrypted_data_bag_secret_key_path = '/etc/chef/encrypted_data_bag_secret'
     #chef.encrypted_data_bag_secret_key_path = 'c:\dev\src\encrypted_data_bag_secret'
+    chef.add_recipe 'ops-linux'
     chef.add_recipe 'blag'
   end
 

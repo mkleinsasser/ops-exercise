@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: ops-nginx
-# Provider:: site
+# Provider:: hhvm_site
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
@@ -9,7 +9,7 @@ action :create do
 
   template "#{node.nginx.dir}/conf.d/#{new_resource.name}.conf" do
     cookbook "ops-nginx"
-    source "site.conf.erb"
+    source "hhvm_site.conf.erb"
     owner  "root"
     group  "root"
     mode   "0644"

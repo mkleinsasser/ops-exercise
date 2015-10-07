@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: ops-mysql
-# Resource:: server
+# Resource:: local_service
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 

@@ -13,13 +13,18 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.box = "ubuntu/trusty64"
+
   config.vm.network "forwarded_port", guest: 80, host: 8080
+
   config.omnibus.chef_version = :latest
   config.berkshelf.enabled = true
 
-  config.vm.provision "chef_zero" do |chef|
-    chef.cookbooks_path = 'cookbooks'
-    chef.data_bags_path = 'data_bags'
+  config.vm.provision "chef_client" do |chef|
+    # Provide your own, bro
+    chef.chef_server_url = 'https://chef-server'
+    chef.validation_key_path = 'validator.pem'
+    chef.delete_node = true
+    chef.delete_client = true
     chef.add_recipe 'blag'
   end
 

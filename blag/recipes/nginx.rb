@@ -6,7 +6,7 @@
 
 include_recipe 'ops-nginx'
 
-ops_nginx_site "blag" do
-  port 80
-  root "/var/www"
+ops_nginx_site 'blag' do
+  port node.port
+  root node.http_root
 end

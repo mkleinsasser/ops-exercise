@@ -1,18 +1,31 @@
 blag Cookbook
 ==================
-Installs blag
+Installs a wordpress blag
 
 Requirements
 ------------
 ### Cookbooks
 The following cookbooks are direct dependencies.
 
+ops-linux
 ops-mysql
 ops-nginx
+wordpress
 
 Attributes
 ----------
-none
+
+#### blag::default
+See `attributes/default.rb`.
+
+- `node['http_root']` - Location to place WordPress files
+- `node['port']` - Port for nginx to listen on
+- `node['mysql_instance']` - Name of the MySQL instance to use with MySQL 
+- `node['mysql_version']` - Version of MySQL to install
+- `node['mysql_host']` - Host of the WordPress MySQL database
+- `node['mysql_port']` - Port of the WordPress MySQL database
+- `node['wordpress']['version']` - Version of WordPress to download
+
 
 Usage
 -----
@@ -21,7 +34,7 @@ Include the recipe either in the node's run_list, or in the recipe of an applica
 
 blag/recipes/default.rb:
 ```
-# uses mysql
+# uses blag
 include_recipe "blag"
 ```
 
@@ -36,8 +49,3 @@ node run_list:
   ]
 }
 ```
-
-License and Authors
--------------------
-- Author:: Matt Kleinsasser (<mxkx@hotmail.com>)
-

@@ -13,6 +13,7 @@ default['port'] = 80
 # mysql
 default['mysql_instance'] = 'blag'
 default['mysql_version'] = '5.5'
+default['mysql_host'] = 'localhost'
 default['mysql_port'] = 3306
 
 
@@ -20,7 +21,7 @@ default['mysql_port'] = 3306
 default['wordpress']['version'] = '4.3.1'
 set['wordpress']['dir'] = node['http_root']
 
-set['wordpress']['db']['host'] = 'localhost'
+set['wordpress']['db']['host'] = node['mysql_host']
 set['wordpress']['db']['port'] = node['mysql_port']
 set['wordpress']['db']['mysql_version'] = node['mysql_version']
 set['wordpress']['db']['instance_name'] = node['mysql_instance']

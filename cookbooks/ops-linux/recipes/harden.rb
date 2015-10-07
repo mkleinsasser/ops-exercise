@@ -7,7 +7,7 @@
 include_recipe "ssh-hardening"
 include_recipe "os-hardening"
 
-# unlock me after hardening
-user 'matt' do
-  :unlock
+# embarassing workaround because ssh-hardening keeps clobbering my user
+execute 'unlock matt' do
+  command "usermod -p '*' matt"
 end

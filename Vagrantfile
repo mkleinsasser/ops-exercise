@@ -21,7 +21,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "chef_client" do |chef|
     # Provide your own, bro
-    chef.chef_server_url = 'https://chef-server'
+    chef.chef_server_url = 'https://chef-server.midco.net'
     chef.validation_key_path = 'validator.pem'
     chef.delete_node = true
     chef.delete_client = true

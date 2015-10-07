@@ -3,8 +3,8 @@ server {
 
   include hhvm.conf;
 
-  access_log   /var/log/nginx/<%= @name %>_access.log;
-  error_log    /var/log/nginx/<%= @name %>_error.log;
+  access_log   /var/log/nginx/<%= @name %>.access.log;
+  error_log    /var/log/nginx/<%= @name %>.error.log;
 
   root <%= @root %>;
   index index.php;

@@ -20,4 +20,5 @@ suites:
     run_list:
       - recipe[ops-linux::default]
       - recipe[blag::default]
+      - recipe[ops-linux::harden]
     attributes:

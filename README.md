@@ -44,13 +44,16 @@ kitchen version: 1.4.2
 ##Approach
 
 1. Wordpress on a LEMP stack with HHVM (up to /wp-admin/install.php)
-2. mysql and nginx deployed with wrapper cookbooks and LWRP
-3. db passwords injected from encrypted data bag
-4. Simple, and I mean bare bones, linux policy wrapper cookbook
-5. Install a couple system packages
-6. Create an ops group and add one user (matt) with public key
-7. Grant the ops group limited sudo rights to manage nginx as root
-8. After provisioning, browse to [http://localhost:8080/] and you should be redirected to the Wordpress setup utility
+1. mysql and nginx deployed with wrapper cookbooks and LWRP
+1. db passwords injected from encrypted data bag
+
+1. Simple, and I mean bare bones, linux policy wrapper cookbook that:
+1. Installs a couple system packages
+1. ssh-hardening and os-hardening with out of the box defaults
+1. Create an ops group and add one user (matt) with public key
+
+1. Grant the ops group limited sudo rights to manage nginx as root
+1. After provisioning, browse to [http://localhost:8080/] and you should be redirected to the Wordpress setup utility
 
 ```
 Add a public key to cookbooks/ops-linux/templates/default/authorized_keys/matt.erb

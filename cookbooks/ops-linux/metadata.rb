@@ -5,3 +5,6 @@ license ''
 description 'Wrapper cookbook for policy scripts'
 long_description 'Wrapper cookbook for policy scripts'
 version '1.0.0'
+
+depends 'os-hardening', '~> 1.3.1'
+depends 'ssh-hardening', '~> 1.1.0'

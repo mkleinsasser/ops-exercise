@@ -21,8 +21,9 @@ Vagrant.configure(2) do |config|
     chef.delete_client = true
 
     chef.encrypted_data_bag_secret_key_path = './cookbooks/blag/test/integration/default/encrypted_data_bag_secret'
-    chef.add_recipe 'ops-linux'
-    chef.add_recipe 'blag'
+    chef.add_recipe 'ops-linux::default'
+    chef.add_recipe 'blag::default'
+    chef.add_recipe 'ops-linux::harden'
   end
 
 end

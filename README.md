@@ -25,46 +25,79 @@
 #Implementation
 
 * Top-level cookbook `cookbooks/blag`
-* Vagrant w/ chef-client
 * kitchen w/ chef-zero
+* vagrant w/ chef-client
 
-##Versions
+##Environment
 
 ```
-$ vagrant -v
-Vagrant 1.7.4
+$ vboxmanage -v
+5.0.0r101573
 
 $ chef -v
 Chef Development Kit Version: 0.8.1
 chef-client version: 12.4.4
 berks version: 3.3.0
 kitchen version: 1.4.2
-```
 
-##Approach
-
-1. Wordpress on a LEMP stack with HHVM (up to /wp-admin/install.php)
-1. mysql and nginx deployed with wrapper cookbooks and LWRP
-1. db passwords injected from encrypted data bag
-
-1. Simple, and I mean bare bones, linux policy wrapper cookbook that:
-1. Installs a couple system packages
-1. ssh-hardening and os-hardening with out of the box defaults
-1. Create an ops group and add one user (matt) with public key
-
-1. Grant the ops group limited sudo rights to manage nginx as root
-1. After provisioning, browse to [http://localhost:8080/] and you should be redirected to the Wordpress setup utility
+$ vagrant -v
+Vagrant 1.7.4
 
 ```
-Add a public key to cookbooks/ops-linux/templates/default/authorized_keys/matt.erb
-then 'ssh matt@localhost:2222' after provisioning
+
+##Overview
+
+####Stack
+
+1. Ubuntu 14.04
+1. LEMP + HHVM running Wordpress and ready to run /wp-admin/install.php
+1. Local mysql instance listening on localhost only
+1. Hardened with os-hardening and ssh-hardening with out of the box defaults
+1. High level serverspec validation of completed node
+
+####Cookbooks
+
+1. Top-level cookbook `cookbooks/blag`
+1. Wrapper cookbooks + LWRPs stubbed out for linux, mysql, and nginx, ready to inject company policies
+1. Db credentials injected via encrypted data bag
+
+####Users and groups
+
+1. "ops" group with limited sudo rights for nginx process control
+1. "matt" user in ops group with public key
+1. Drop your own public key in `cookbooks/ops-linux/templates/default/authorized_keys/matt.erb` if you like
+
+##Kitchen
+
+No special configuration needed
+
+####Provision
+
+```
+$ cd cookbooks/blag
+$ kitchen converge
+```
+
+####Serverspec validation
+
+```
+$ kitchen verify
+```
+
+####Try it
+
+Browse to <http://localhost:8080> which will redirect you to <http://localhost:8080/wp-admin/install.php>
+
+####Destroy
+
+```
+$ kitchen destroy
 ```
 
 ##Vagrant
 
-###Vagrantfile
+####Vagrantfile
 
-* Configured with virtualbox
 * Supply your own chef-server URL and validation key
 
 ```
@@ -72,9 +105,9 @@ then 'ssh matt@localhost:2222' after provisioning
     chef.validation_key_path = '/etc/chef/validator.pem'
 ```
 
-###Credentials
+####Db credentials
 
-mysql passwords are stored in an encrypted databag. For test purposes upload them to your chef-server as follows:
+mysql passwords are stored in an encrypted databag. It's easy to borrow kitchen's databag for test purposes.
 
 ```
 $ knife data bag create creds
@@ -91,17 +124,16 @@ wordpress:
 
 ```
 
-###Test
+####Provision
 
-`vagrant up` should do it
+`vagrant up`
 
+####Try it
 
-##Kitchen
+Browse to <http://localhost:8080> which will redirect you to <http://localhost:8080/wp-admin/install.php>
 
-`cookbooks/blag` has a test kitchen config with encrypted data bag support built in. No special configuration needed.
+####Destroy
 
-```
-$ cd cookbooks/blag
-$ kitchen converge
-```
+`vagrant destroy`
+
 

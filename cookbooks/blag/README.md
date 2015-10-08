@@ -7,10 +7,12 @@ Requirements
 ### Cookbooks
 The following cookbooks are direct dependencies.
 
-ops-linux
-ops-mysql
-ops-nginx
-wordpress
+```
+depends 'wordpress', '~> 3.0.0'
+depends 'ops-linux', '~> 1.0.0'
+depends 'ops-mysql', '~> 1.0.0'
+depends 'ops-nginx', '~> 1.0.0'
+```
 
 Attributes
 ----------

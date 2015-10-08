@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 
-# Data tier
+## Data tier
 
 describe service('mysql') do
   it { should be_running }
@@ -12,7 +12,7 @@ describe port(3306) do
 end
 
 
-# Web tier
+## Web tier
 
 describe service('hhvm') do
   it { should be_running }
@@ -27,7 +27,7 @@ describe port(80) do
 end
 
 
-# Functionally test web server
+## Functional test
 
 describe package('curl') do
   it { should be_installed }
@@ -40,7 +40,7 @@ describe command('curl --head http://localhost/wp-admin/install.php') do
 end
 
 
-# Users / Groups
+## Users / Groups
 
 describe group('ops') do
   it { should exist }
@@ -50,6 +50,7 @@ describe user('matt') do
   it { should belong_to_group 'ops' }
 end
 
+# Test process control grant to the ops group
 describe command('sudo su - matt -c "sudo /usr/sbin/nginx -t"') do
   its(:stderr) { should match /nginx.conf syntax is ok/ }
   its(:stderr) { should match /nginx.conf test is successful/ }

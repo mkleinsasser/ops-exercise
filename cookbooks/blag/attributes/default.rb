@@ -19,8 +19,9 @@ default['mysql_port'] = 3306
 
 # wordpress
 default['wordpress']['version'] = '4.3.1'
-set['wordpress']['dir'] = node['http_root']
 
+# copy these from the node config
+set['wordpress']['dir'] = node['http_root']
 set['wordpress']['db']['host'] = node['mysql_host']
 set['wordpress']['db']['port'] = node['mysql_port']
 set['wordpress']['db']['mysql_version'] = node['mysql_version']

@@ -7,6 +7,8 @@
 
 action :create do
 
+#TODO: prohibit "." dot and "~" tilde in the resource name per sudoers man page
+
   template "/etc/sudoers.d/#{new_resource.name}_ops-nginx" do
     cookbook "ops-nginx"
     source "sudoers.d.erb"

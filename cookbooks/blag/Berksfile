@@ -1,7 +1,9 @@
 source 'https://supermarket.chef.io'
 
+## Provide relative paths to local cookbooks
 cookbook 'ops-linux', '~> 1.0.0', path: '../ops-linux'
 cookbook 'ops-mysql', '~> 1.0.0', path: '../ops-mysql'
 cookbook 'ops-nginx', '~> 1.0.0', path: '../ops-nginx'
 
+## All other dependencies come from respective metatdata.rb's
 metadata

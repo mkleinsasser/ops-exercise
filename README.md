@@ -130,7 +130,9 @@ wordpress:
 
 ####Provision
 
-`vagrant up`
+`
+$ vagrant up
+`
 
 ####Try it
 
@@ -138,6 +140,8 @@ Browse to <http://localhost:8080> which will redirect you to <http://localhost:8
 
 ####Destroy
 
-`vagrant destroy`
+`
+$ vagrant destroy
+`
 
 

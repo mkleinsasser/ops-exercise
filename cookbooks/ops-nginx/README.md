@@ -53,7 +53,7 @@ end
 
 #### Parameters
 
-- Resource name - A string injected into the filename of the config file, as "`<name`>.conf"
+- Resource name - A string injected into the filename of the config file, as "\<name>.conf"
 
 - `root` - root directory of the web site. Defaults to '/var/www'
 
@@ -77,7 +77,7 @@ end
 
 #### Parameters
 
-- Resource name - A string injected into the filename of the sudoers file, as "/etc/sudoers.d/`<name`>_ops-nginx". Must not contain a "." (dot) or end with a "~" tilde. See the sudoers man page for a full explanation.
+- Resource name - A string injected into the filename of the sudoers file, as "/etc/sudoers.d/\<name>_ops-nginx". Must not contain a "." (dot) or end with a "~" tilde. See the sudoers man page for a full explanation.
 
 - `group` - group granted 
 
